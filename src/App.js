@@ -9,8 +9,8 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/"></Route>
-          <Route path="/"></Route>
+          <Route path="/about"></Route>
+          <Route path="/contact"></Route>
           <Route path="/"></Route>
         </Switch>
         <Footer />

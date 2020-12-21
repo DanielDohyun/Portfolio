@@ -10,7 +10,7 @@ function Header() {
             <div className="header__right">
                 <ul>
                     <li>
-                        <Link to="/">HOME</Link>
+                        <Link to="/">WORK</Link>
                     </li>
                     <li>
                         <Link to="/about">ABOUT</Link>
