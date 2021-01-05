@@ -3,7 +3,7 @@ import './Footer.css';
 
 function Footer() {
     return (
-        <div className="footer"> 
+        <div id="footer" className="footer"> 
             <div className="footer__icons">
                 <a className="footer__linked" target="_blank" href="https://linkedin.com/in/daniel-dh-kim">
                     <img className="footer__linkedImg" src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" />
