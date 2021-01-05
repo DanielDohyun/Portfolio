@@ -2,7 +2,22 @@
 @import "../../styles/partials.scss";
 
 .work {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  &__react {
+    display: flex;
+    flex-wrap: wrap;
+    // width: 100%;
+  }
+
+  &__card {
+    box-sizing: border-box;
+    height: 30vw;
+    width: 30vw;
+    margin: 2rem 1rem;
+  }
+
+  &__cardImg {
+    object-fit: contain;
+    height: 70%;
+    width: 100%;
+  }
 }
