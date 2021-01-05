@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import './Work.css';
+import './Work.scss';
 // import closet from '../../../public/imgs/closet.png';
 import closet from '../../imgs/closet.png';
 

@@ -1,0 +1,8 @@
+@import "../../styles/mixins";
+@import "../../styles/partials.scss";
+
+.work {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
