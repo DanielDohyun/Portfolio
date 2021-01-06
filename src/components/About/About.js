@@ -1,5 +1,7 @@
 import React from 'react';
 import './About.css';
+import uoft from '../../imgs/uoft.jpg';
+import brain from '../../imgs/brain.png';
 
 function About() {
     return (
@@ -19,7 +21,33 @@ function About() {
                         Front-end
                     </div>
                     <div className="about__desc">
-
+                        HTML, CSS, JavaScript
+                         <br /> React, Web APIs
+                    </div>
+                </div>
+                <div className="about__major">
+                    <div className="about__icon">
+                        <i class="fas fa-server"></i>
+                    
+                    </div>
+                    <div className="about__title">
+                        Back-end
+                    </div>
+                    <div className="about__desc">
+                        JavaScript, NodeJS
+                         <br /> Rest APIs
+                    </div>
+                </div>
+                <div className="about__schools">
+                    <div className="about__school">
+                        <img src={uoft} alt="toronto" className="about__logo" />
+                        <p className="about__name">University of Toronto, Bachelor's of Science</p>
+                        <p className="about__period">2013-2018</p>
+                    </div>
+                    <div className="about__school">
+                        <img src={brain} alt="brain" className="about__logo" />
+                        <p className="about__name">BrainStation,  Web Development Diploma</p>
+                        <p className="about__period">2020-2020</p>
                     </div>
                 </div>
             </div>
