@@ -32,6 +32,15 @@
   border: 1px solid black;
 }
 
+.header__toggle {
+  position: absolute;
+  right: 32px;
+  top: 20px;
+  font-size: 24px;
+  color: white;
+  display: none;
+}
+
 .header__right > ul > li {
   list-style-type: none;
   margin-right: 1rem;
@@ -39,4 +48,23 @@
 
 .header__item:hover {
   background-color: blue;
+}
+
+/* <768px screen width */
+@media screen and (max-width: 768px) {
+  .header__toggle {
+    display: block;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__right {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
 }
