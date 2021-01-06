@@ -10,13 +10,13 @@ function Header() {
             <div className="header__right">
                 <ul>
                     <li>
-                        <Link to="/">WORK</Link>
+                        <Link className="header__item active" to="/">WORK</Link>
                     </li>
                     <li>
-                        <Link to="/about">ABOUT</Link>
+                        <Link className="header__item" to="/about">ABOUT</Link>
                     </li>
                     <li>
-                        <Link to="/contact">CONTACT</Link>
+                        <Link className="header__item" to="/contact">CONTACT</Link>
                     </li>
                 </ul>
             </div>

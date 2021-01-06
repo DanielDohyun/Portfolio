@@ -1,0 +1,70 @@
+.about {
+  text-align: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+
+  &__majors {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px 0;
+  }
+
+  &__icon {
+    width: 170px;
+    height: 170px;
+    font-size: 70px;
+    line-height: 170px;
+    margin: auto;
+    border: 1px solid blue;
+    border-radius: 50%;
+    color: blue;
+
+    & i {
+      transition: all 300ms ease;
+    }
+
+    &:hover i {
+      color: pink;
+      transform: rotate(-30deg) scale(1.1);
+    }
+  }
+
+  &__title,
+  &__desc {
+    color: darkgray;
+  }
+
+  &__desc {
+    font-size: small;
+  }
+
+  &__school {
+    display: flex;
+    align-items: center;
+  }
+
+  &__schoolDesc {
+    margin: 0 16px;
+    text-align: left;
+  }
+
+  &__name,
+  &__period {
+    color: lightgray;
+  }
+
+  &__name {
+    font-size: small;
+  }
+
+  &__period {
+    font-size: x-small;
+  }
+
+  &__logo {
+    object-fit: contain;
+    height: 60px;
+    width: 60px;
+  }
+}

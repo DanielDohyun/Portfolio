@@ -2,10 +2,15 @@
 @import "../../styles/partials.scss";
 
 .work {
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+
   &__react {
     display: flex;
     flex-wrap: wrap;
-    // width: 100%;
+    // justify-content: space-evenly;
+    width: 100%;
   }
 
   &__card {
