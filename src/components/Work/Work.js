@@ -8,7 +8,13 @@ import { Button } from '@material-ui/core';
 function Work() {
     return (
         <div id="work" className="work">
-                <h1>React App</h1>
+            <h1>My work</h1>
+            <h3>Projects</h3>
+            <div className="work__categories">
+                <button className="work__btn">All</button>
+                <button className="work__btn">Full Stack</button>
+                <button className="work__btn">Back-end</button>
+            </div>
             <div className="work__react">
                 <Card className="work__card" >
                     <Card.Img className="work__cardImg" variant="top" src={closet} />
