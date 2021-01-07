@@ -2,10 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 2rem;
-  /* position: fixed; */
+  box-sizing: border-box;
+  padding: 0 2rem;
+  position: fixed;
+  width: 100%;
   top: 0;
-  height: 100px;
+  height: 60px;
+  background-color: transparent;
+  transition: all 250ms ease-in-out;
+}
+
+.header.active {
+  background-color: lightgray;
 }
 
 .header > h1 > a {

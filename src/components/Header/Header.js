@@ -1,10 +1,23 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
+    const [nav, setNav] = useState(false);
+
+    const onScroll = () => {
+        if (window.scrollY >= 60) {
+            setNav(true);
+        } else {
+            setNav(false);
+        }
+    }
+
+    window.addEventListener('scroll', onScroll);
+
     return (
-        <div className="header">
+        <div className={nav ? 'header active' : 'header'} >
             <h1><Link to="/">Daniel Kim</Link></h1>
 
             <div className="header__right">
