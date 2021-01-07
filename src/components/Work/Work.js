@@ -6,7 +6,7 @@ function Work() {
     return (
         <div id="work" className="work">
             <h1>My work</h1>
-            <h3>Projects</h3>
+            <h3 className="work__subHeading">Projects</h3>
             <div className="work__categories">
                 <button className="work__btn active">All</button>
                 <button className="work__btn">Full Stack</button>
