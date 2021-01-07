@@ -1,8 +1,6 @@
 import './Work.scss';
-import closet from '../../imgs/closet.png';
 import React, { useState, useEffect } from 'react';
 import db from '../../firebase';
-import { WorkSharp } from '@material-ui/icons';
 
 function Work() {
     const [works, setWorks] = useState([]);
@@ -40,7 +38,7 @@ function Work() {
             <h1>My work</h1>
             <h3 className="work__subHeading">Projects</h3>
             <div className="work__categories">
-                <button className="work__btn active" onClick={showAll}>All</button>
+                <button className="work__btn" onClick={showAll}>All</button>
                 <button className="work__btn" onClick={showFull}>Full Stack</button>
                 <button className="work__btn" onClick={showBack}>Back-end</button>
             </div>

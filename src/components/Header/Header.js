@@ -5,6 +5,7 @@ import './Header.css';
 
 function Header() {
     const [nav, setNav] = useState(false);
+    const [toggle, setToggle] = useState(false);
 
     const onScroll = () => {
         if (window.scrollY >= 60) {
@@ -14,28 +15,32 @@ function Header() {
         }
     }
 
+    const toggleOpen = () => {
+        setToggle(!toggle);
+    }
+
     window.addEventListener('scroll', onScroll);
 
     return (
         <div className={nav ? 'header active' : 'header'} >
             <h1><Link to="/">Daniel Kim</Link></h1>
 
-            <div className="header__right">
-                <ul className="header__right">
+            <div className={toggle ? 'header__right open' : 'header__right'}>
+                <ul className={toggle ? 'header__right open' : 'header__right'}>
                     <li>
-                        <Link className="header__item active" to="/">WORK</Link>
+                        <Link className="header__item" onClick={toggleOpen} to="/">WORK</Link>
                     </li>
                     <li>
-                        <Link className="header__item" to="/about">ABOUT</Link>
+                        <Link className="header__item" onClick={toggleOpen} to="/about">ABOUT</Link>
                     </li>
                     <li>
-                        <Link className="header__item" to="/contact">CONTACT</Link>
+                        <Link className="header__item" onClick={toggleOpen} to="/contact">CONTACT</Link>
                     </li>
                 </ul>
                 
             </div>
 
-            <button className="header__toggle">
+            <button className="header__toggle" onClick={toggleOpen}>
                 <i class="fas fa-bars"></i>
             </button>
         </div>
