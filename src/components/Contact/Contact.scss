@@ -51,6 +51,50 @@
     cursor: text;
   }
 
+  &__success {
+    background-color: #04c986;
+    border: 1px solid#157c59;
+    color: #157c59;
+    font-size: 9px;
+    padding: 5px 0;
+    position: relative;
+    transition: all 200ms ease-in-out;
+    display: none;
+
+    @include tablet {
+      font-size: 10px;
+    }
+
+    @include desktop {
+      font-size: 12px;
+    }
+  }
+
+  &__success-open {
+    background-color: #04c986;
+    border: 1px solid#157c59;
+    color: #157c59;
+    font-size: 9px;
+    padding: 5px 0;
+    position: relative;
+    transition: all 200ms ease-in-out;
+
+    @include tablet {
+      font-size: 10px;
+    }
+
+    @include desktop {
+      font-size: 12px;
+    }
+  }
+
+  &__closeBox {
+    position: absolute;
+    right: 2px;
+    margin-top: -2px;
+    cursor: pointer;
+  }
+
   &__btn {
     background-color: transparent;
     color: white;
@@ -58,5 +102,25 @@
     margin: 5px 0 0 0;
     outline: 0;
     padding: 10px 30px;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.MuiSvgIcon-root {
+  font-size: 16px !important;
+  transition: all 200ms ease-in-out;
+  margin-top: 1px;
+
+  @include tablet {
+    font-size: 20px !important;
+    margin-top: -1px;
+  }
+
+  @include desktop {
+    font-size: 24px !important;
   }
 }
