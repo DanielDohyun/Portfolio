@@ -22,6 +22,7 @@
 .header > h1 > a {
   text-decoration: none;
   color: white;
+  transition: all 300ms ease;
 }
 
 .header > h1 > a:hover {
@@ -41,7 +42,7 @@
   padding: 4px 8px;
   border-radius: 4px;
   transition: all 300ms ease;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
 }
 
 .header__toggle {
@@ -59,7 +60,7 @@
 }
 
 .header__item:hover {
-  border: 1px solid #c19897;
+  /* border: 1px solid #c19897; */
   /* border: 1px solid white; */
   color: #e31b6d;
 }
@@ -88,7 +89,6 @@
     position: fixed;
     width: 100%;
     top: 0;
-    /* background-color: rgba(245, 245, 247, 1); */
     background-color: #1b242f;
     transition: all 350ms ease-in-out;
     z-index: 100;

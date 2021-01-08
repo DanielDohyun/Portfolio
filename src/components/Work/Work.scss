@@ -53,14 +53,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   &__project {
-    width: 50vw;
-    height: 58vw;
-    max-width: 350px;
-    max-height: 260px;
-    margin: 5px 2px;
+    object-fit: contain;
+    width: 240px;
+    // height: 58vw;
+    max-width: 300px;
+    max-height: 300px;
+    // margin: 5px 2px;
     background-color: lightgray;
     position: relative;
     display: flex;
@@ -70,14 +73,13 @@
 
     @include tablet {
       flex-grow: inherit;
-      width: 24vw;
-      height: 29vw;
-      margin-right: 4px;
+      width: 300px;
+      // margin-right: 4px;
     }
 
     @include desktop {
-      width: 20vw;
-      height: 27vw;
+      width: 390px;
+      // height: 27vw;
     }
   }
 
@@ -121,6 +123,7 @@
       transform: translateX(-30%);
       margin-left: -12px;
       margin-top: 9px;
+      margin-bottom: 4px;
       background-color: lightgray;
     }
   }
