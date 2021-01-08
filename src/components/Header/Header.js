@@ -2,7 +2,7 @@ import { ControlCameraOutlined } from '@material-ui/icons';
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
+import './Header.scss';
 
 function Header() {
     const [active, setActive] = useState('');
@@ -28,7 +28,7 @@ function Header() {
 
     return (
         <div className={toggle ? 'header-toggle header' : 'header'} >
-            <h1><Link to="/">Daniel Kim</Link></h1>
+            <h1><Link to="/">DANIEL KIM</Link></h1>
 
             <div className={toggle ? 'header__right open' : 'header__right'}>
                 <ul className={toggle ? 'header__right open' : 'header__right'}>

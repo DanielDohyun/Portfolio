@@ -9,8 +9,13 @@
   margin-bottom: 100px;
   background-color: #f5f5f5;
 
+  &__heading {
+    font-weight: 400;
+  }
+
   &__subHeading {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    font-weight: 400;
   }
 
   &__categories {
@@ -44,8 +49,10 @@
   &__btn:focus,
   &__btn::selection,
   &__btn:hover {
-    background-color: pink;
+    background-color: rgb(255, 218, 216);
+    // background-color: pink;
     color: white;
+    // opacity: 0.3;
     outline: 0;
   }
 
@@ -130,6 +137,8 @@
 }
 
 .active-btn {
-  background-color: pink;
+  // background-color: pink;
+  background-color: rgb(255, 218, 216);
+  // opacity: 0.3;
   color: white;
 }

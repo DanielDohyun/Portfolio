@@ -6,9 +6,10 @@ import brain from '../../imgs/brain.png';
 function About() {
     return (
         <div id="about" className="about">
-            <h1>About me</h1>
+            <h1 className="about__heading">ABOUT ME</h1>
             <p className="about__info">
-                I'm an optimistic, eager to learn, and passionate junior full-stack developer looking for a full-time job where I can grow. I'm continuously developing through cloning the react apps and learning new languages. Stay tuned for my recent works work. Thank you!
+                Hello! I'm Daniel Dohyun Kim.
+                I'm an optimistic, eager to learn, and passionate junior full-stack developer looking for a full-time job where I can grow. I'm continuously developing through cloning the react apps and learning new languages. Stay tuned for my recent works. Thank you!
             </p>
 
             <div className="about__majors">

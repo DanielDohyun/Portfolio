@@ -4,9 +4,9 @@ import './Contact.scss';
 function Contact() {
     return (
         <div className="contact">
-            <h1 className="contact__heading">Contact</h1>
+            <h1 className="contact__heading">CONTACT</h1>
             <div className="contact__line"></div>
-            <p className="contact__desc">Have a question? Leave me a message. <br/> I'll get back to you as soon as possible!</p>
+            <p className="contact__desc">Have a question? Please leave a message. <br/> I'll get back to you as soon as possible!</p>
 
             <form className="contact__form" action="submit">
                 <div className="contact__inputBox">

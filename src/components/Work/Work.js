@@ -40,27 +40,27 @@ function Work() {
 
     return (
         <div id="work" className="work">
-            <h1>My work</h1>
-            <h3 className="work__subHeading">Projects</h3>
+            <h1 className="work__heading">MY WORK</h1>
+            <h3 className="work__subHeading">PROJECTS</h3>
             <div className="work__categories">
                 <button
                     id="1" className={`work__btn ${active == 1 ? 'active-btn' : ''}`} onClick={(id) => {
                         showAll();
                         handleActive(1);
                     }}
-                >All</button>
+                >ALL</button>
                 <button
                     id="2" className={`work__btn ${active == 2 ? 'active-btn' : ''}`} onClick={(id) => {
                         showFull();
                         handleActive(2);
                     }}
-                >Full Stack</button>
+                >FULL STACK</button>
                 <button
                     id="3" className={`work__btn ${active == 3 ? 'active-btn' : ''}`} onClick={(id) => {
                         showBack();
                         handleActive(3);
                     }}
-                >Back-end</button>
+                >BACK-END</button>
             </div>
 
             <div className="work__projects">
