@@ -6,13 +6,38 @@ import CloseIcon from '@material-ui/icons/Close';
 
 function Contact() {
     const [name, setName] = useState('');
+    const [nameErr, setNameErr] = useState('');
     const [email, setEmail] = useState('');
+    const [emailErr, setEmailErr] = useState('');
     const [msg, setMsg] = useState('');
+    const [msgErr, setMsgErr] = useState('');
     const [open, setOpen] = useState(false);
+
+    // form validation
+    const validate = () => {
+        if (!name) {
+            setNameErr('Name cannot be blank');
+            return false;
+        }
+
+        if (!email.includes('@')) {
+            setEmailErr('Invalid email');
+            return false;
+        }
+       
+        if (!msg) {
+            setMsgErr('Message cannot be blank');
+            return false;
+        }
+       
+        return true;
+    }
 
     const handleSubmit = e => {
         e.preventDefault();
-        db
+        const isValid = validate();
+        if (isValid) {
+            db
             .collection('msgs')
             .add({
                 name: name,
@@ -21,10 +46,15 @@ function Contact() {
                 msg: msg,
             })
         
-        setName('');
-        setEmail('');
-        setMsg('');
-        setOpen(true);
+            setName('');
+            setEmail('');
+            setMsg('');
+            setEmailErr('');
+            setNameErr('');
+            setMsgErr('');
+            setOpen(true);
+        }
+        
     };
 
     const handleClose = () => {
@@ -40,10 +70,13 @@ function Contact() {
             <form className="contact__form">
                 <div className="contact__inputBox">
                     <input placeholder="Name" type="text" className="contact__input" name="name" value={name} onChange={e => setName(e.target.value)} required/>
-
+                    <div style={{fontSize: 12, color: 'red'}} className="contact__err">{nameErr }</div>
+                    
                     <input placeholder="Enter email" type="email" className="contact__input" name="email" value={email} onChange={e => setEmail(e.target.value)} required/>
+                    <div style={{fontSize: 12, color: 'red'}} className="contact__err">{emailErr }</div>
                     
                     <textarea placeholder="Your Message" className="contact__input" name="msg" id="msg" cols="30" rows="10" value={msg} onChange={e => setMsg(e.target.value)} required></textarea>
+                    <div style={{fontSize: 12, color: 'red'}} className="contact__err">{msgErr }</div>
                     
                     <div
                         className={open ? 'contact__success-open': 'contact__success'}

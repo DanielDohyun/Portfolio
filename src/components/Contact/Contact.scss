@@ -58,6 +58,7 @@
     font-size: 9px;
     padding: 5px 0;
     position: relative;
+    transform: translateY(-30px);
     transition: all 200ms ease-in-out;
     display: none;
 
@@ -72,6 +73,7 @@
 
   &__success-open {
     background-color: #04c986;
+    transform: translateY(0px);
     border: 1px solid#157c59;
     color: #157c59;
     font-size: 9px;
