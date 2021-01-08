@@ -1,41 +1,54 @@
+import { ControlCameraOutlined } from '@material-ui/icons';
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
-    const [nav, setNav] = useState(false);
+    const [active, setActive] = useState('');
     const [toggle, setToggle] = useState(false);
 
-    const onScroll = () => {
-        if (window.scrollY >= 60) {
-            setNav(true);
-        } else {
-            setNav(false);
-        }
+    // const onScroll = () => {
+    //     if (window.scrollY >= 60) {
+    //         setNav(true);
+    //     } else {
+    //         setNav(false);
+    //     }
+    // }
+
+    const handleActive = id => {
+        setActive(id);
     }
 
     const toggleOpen = () => {
         setToggle(!toggle);
     }
 
-    window.addEventListener('scroll', onScroll);
+    // window.addEventListener('scroll', onScroll);
 
     return (
-        // nav ? 'header active' : 'header' &&
         <div className={toggle ? 'header-toggle header' : 'header'} >
             <h1><Link to="/">Daniel Kim</Link></h1>
 
             <div className={toggle ? 'header__right open' : 'header__right'}>
                 <ul className={toggle ? 'header__right open' : 'header__right'}>
                     <li>
-                        <Link className="header__item" onClick={toggleOpen} to="/">WORK</Link>
+                        <Link id="1" className={`header__item ${active == 1 ? 'active-color' : ''}`} onClick={(id) => {
+                            toggleOpen();
+                            handleActive(1);
+                        }} to="/">WORK</Link>
                     </li>
                     <li>
-                        <Link className="header__item" onClick={toggleOpen} to="/about">ABOUT</Link>
+                        <Link id="2" className={`header__item ${active == 2 ? 'active-color' : ''}`} onClick={(id) => {
+                            toggleOpen();
+                            handleActive(2);
+                        }} to="/about">ABOUT</Link>
                     </li>
                     <li>
-                        <Link className="header__item" onClick={toggleOpen} to="/contact">CONTACT</Link>
+                        <Link id="3" className={`header__item ${active == 3 ? 'active-color' : ''}`} onClick={(id) => {
+                            toggleOpen();
+                            handleActive(3);
+                        }} to="/contact">CONTACT</Link>
                     </li>
                 </ul>
                 

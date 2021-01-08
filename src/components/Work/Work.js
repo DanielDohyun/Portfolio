@@ -5,6 +5,11 @@ import db from '../../firebase';
 function Work() {
     const [works, setWorks] = useState([]);
     const [filter, setFilter] = useState(null);
+    const [active, setActive] = useState(1);
+
+    const handleActive = id => {
+        setActive(id);
+    }
 
     var all = works.filter(e => e.data.type === "full" || e.data.type === "back");
     var full = works.filter(e => e.data.type === 'full');
@@ -38,9 +43,24 @@ function Work() {
             <h1>My work</h1>
             <h3 className="work__subHeading">Projects</h3>
             <div className="work__categories">
-                <button className="work__btn" onClick={showAll}>All</button>
-                <button className="work__btn" onClick={showFull}>Full Stack</button>
-                <button className="work__btn" onClick={showBack}>Back-end</button>
+                <button
+                    id="1" className={`work__btn ${active == 1 ? 'active-btn' : ''}`} onClick={(id) => {
+                        showAll();
+                        handleActive(1);
+                    }}
+                >All</button>
+                <button
+                    id="2" className={`work__btn ${active == 2 ? 'active-btn' : ''}`} onClick={(id) => {
+                        showFull();
+                        handleActive(2);
+                    }}
+                >Full Stack</button>
+                <button
+                    id="3" className={`work__btn ${active == 3 ? 'active-btn' : ''}`} onClick={(id) => {
+                        showBack();
+                        handleActive(3);
+                    }}
+                >Back-end</button>
             </div>
 
             <div className="work__projects">
