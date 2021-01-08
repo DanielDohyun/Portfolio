@@ -22,7 +22,8 @@ function Header() {
     window.addEventListener('scroll', onScroll);
 
     return (
-        <div className={nav ? 'header active' : 'header'} >
+        // nav ? 'header active' : 'header' &&
+        <div className={toggle ? 'header-toggle header' : 'header'} >
             <h1><Link to="/">Daniel Kim</Link></h1>
 
             <div className={toggle ? 'header__right open' : 'header__right'}>
