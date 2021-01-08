@@ -15,7 +15,7 @@ function Footer() {
             </div>
             
             <h5 className="footer__phone">Phone: 647-274-1129</h5>
-            <h5 className="footer__name">Daniel Kim @2020</h5>
+            <h5 className="footer__name">Daniel Kim <span className="footer__yr">@2020</span></h5>
         </div>
     )
 }

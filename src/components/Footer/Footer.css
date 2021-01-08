@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #1b242f;
+  padding: 70px 0 50px 0;
+  color: #8f9aa7;
 }
 
 .footer__linkedImg {
@@ -12,4 +15,8 @@
 .footer__emailImg {
   height: 40px;
   margin-left: 1rem;
+}
+
+.footer__yr {
+  color: #e31b6d;
 }

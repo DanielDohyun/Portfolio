@@ -8,14 +8,17 @@
   width: 100%;
   top: 0;
   height: 60px;
+  color: white;
   /* background-color: rgba(245, 245, 247, 0.7); */
-  background-color: rgba(245, 245, 247, 1);
+  /* background-color: rgba(245, 245, 247, 1); */
+  background-color: #1b242f;
+  border-bottom: 3px solid #04c2c9;
   transition: all 100ms ease-in-out;
   z-index: 100;
 }
 
 .header.active {
-  background-color: rgba(245, 245, 247, 1);
+  /* background-color: rgba(245, 245, 247, 1); */
 }
 
 .header > h1 {
@@ -24,7 +27,7 @@
 
 .header > h1 > a {
   text-decoration: none;
-  color: #222222;
+  color: white;
 }
 
 .header > h1 > a:hover {
@@ -38,7 +41,7 @@
 
 .header__item {
   text-decoration: none;
-  color: #222222;
+  color: white;
   font-size: 20px;
   font-weight: 500;
   padding: 4px 8px;
@@ -77,6 +80,7 @@
     margin-top: -0.5rem;
     border: none;
     outline: none;
+    background-color: #1b242f;
   }
 
   .header-toggle {
@@ -89,7 +93,8 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: rgba(245, 245, 247, 1);
+    /* background-color: rgba(245, 245, 247, 1); */
+    background-color: #1b242f;
     transition: all 350ms ease-in-out;
     z-index: 100;
   }
