@@ -11,9 +11,9 @@ function Work() {
         setActive(id);
     }
 
-    var all = works.filter(e => e.data.type === "full" || e.data.type === "back");
-    var full = works.filter(e => e.data.type === 'full');
-    var back = works.filter(e => e.data.type === 'back');
+    var all = works.filter(e => e.data.type === "full" || e.data.type === "back" || e.data.type === "both");
+    var full = works.filter(e => e.data.type === 'full' || e.data.type === "both");
+    var back = works.filter(e => e.data.type === 'back' || e.data.type === "both");
 
     const showAll = () => {
         setFilter(all);
@@ -44,19 +44,19 @@ function Work() {
             <h3 className="work__subHeading">PROJECTS</h3>
             <div className="work__categories">
                 <button
-                    id="1" className={`work__btn ${active == 1 ? 'active-btn' : ''}`} onClick={(id) => {
+                    id="1" className={`work__btn ${active === 1 ? 'active-btn' : ''}`} onClick={(id) => {
                         showAll();
                         handleActive(1);
                     }}
                 >ALL</button>
                 <button
-                    id="2" className={`work__btn ${active == 2 ? 'active-btn' : ''}`} onClick={(id) => {
+                    id="2" className={`work__btn ${active === 2 ? 'active-btn' : ''}`} onClick={(id) => {
                         showFull();
                         handleActive(2);
                     }}
                 >FULL STACK</button>
                 <button
-                    id="3" className={`work__btn ${active == 3 ? 'active-btn' : ''}`} onClick={(id) => {
+                    id="3" className={`work__btn ${active === 3 ? 'active-btn' : ''}`} onClick={(id) => {
                         showBack();
                         handleActive(3);
                     }}
@@ -68,6 +68,7 @@ function Work() {
                 {
                     filter? filter.map(work => (
                         <a
+                            key={work.id}
                             target="blank"
                             href={work.data.src}
                             className="work__project"
@@ -84,6 +85,7 @@ function Work() {
                         </a>
                     )) : works.map(work => (
                             <a
+                                key={work.id}
                                 target="blank"
                                 href={work.data.src}
                                 className="work__project"

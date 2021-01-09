@@ -12,13 +12,19 @@
   }
 }
 
+@mixin projectTablet {
+  @media screen and (min-width: $projectTablet-breakpoint) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media screen and (min-width: $desktop-breakpoint) {
     @content;
   }
 }
 
-//FLEXBOX:
+//FLEXBOX
 @mixin flex(
   $direction: column,
   $justify: flex-start,

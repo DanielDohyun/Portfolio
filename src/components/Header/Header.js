@@ -1,4 +1,3 @@
-import { ControlCameraOutlined } from '@material-ui/icons';
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -33,19 +32,19 @@ function Header() {
             <div className={toggle ? 'header__right open' : 'header__right'}>
                 <ul className={toggle ? 'header__right open' : 'header__right'}>
                     <li>
-                        <Link id="1" className={`header__item ${active == 1 ? 'active-color' : ''}`} onClick={(id) => {
+                        <Link id="1" className={`header__item ${active === 1 ? 'active-color' : ''}`} onClick={(id) => {
                             toggleOpen();
                             handleActive(1);
                         }} to="/">WORK</Link>
                     </li>
                     <li>
-                        <Link id="2" className={`header__item ${active == 2 ? 'active-color' : ''}`} onClick={(id) => {
+                        <Link id="2" className={`header__item ${active === 2 ? 'active-color' : ''}`} onClick={(id) => {
                             toggleOpen();
                             handleActive(2);
                         }} to="/about">ABOUT</Link>
                     </li>
                     <li>
-                        <Link id="3" className={`header__item ${active == 3 ? 'active-color' : ''}`} onClick={(id) => {
+                        <Link id="3" className={`header__item ${active === 3 ? 'active-color' : ''}`} onClick={(id) => {
                             toggleOpen();
                             handleActive(3);
                         }} to="/contact">CONTACT</Link>
@@ -55,7 +54,7 @@ function Header() {
             </div>
 
             <button className="header__toggle" onClick={toggleOpen}>
-                <i class="fas fa-bars"></i>
+                <i className="fas fa-bars"></i>
             </button>
         </div>
     )
