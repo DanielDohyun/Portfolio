@@ -2,14 +2,16 @@ import React from 'react';
 import './About.scss';
 import uoft from '../../imgs/uoft.jpg';
 import brain from '../../imgs/brain.png';
+import profile from '../../imgs/profile.png';
 
 function About() {
     return (
         <div id="about" className="about">
+            <img alt="profile pic" src={profile} className="about__profile" />
             <h1 className="about__heading">ABOUT ME</h1>
             <p className="about__info">
-                Hello! I'm Daniel Dohyun Kim.
-                I'm an optimistic, eager to learn, and passionate junior full-stack developer looking for a full-time job where I can grow. I'm continuously developing through cloning the react apps and learning new languages. Stay tuned for my recent works. Thank you!
+                Hi, I'm Daniel Kim.
+                I'm an optimistic, eager to learn, and passionate junior full-stack developer seeking a full-time job opportunity. I'm continuously developing through cloning the react apps and learning new languages. Stay tuned for my recent works. Thank you!
             </p>
 
             <div className="about__majors">

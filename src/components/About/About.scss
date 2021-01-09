@@ -9,6 +9,12 @@
   max-width: 900px;
   padding-top: 200px;
 
+  &__profile {
+    object-fit: contain;
+    width: 150px;
+    margin-bottom: 2rem;
+  }
+
   &__heading {
     font-weight: 400;
     margin-bottom: 10px;
