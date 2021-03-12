@@ -2,7 +2,7 @@ import React from 'react';
 import './About.scss';
 import uoft from '../../imgs/uoft.jpg';
 import brain from '../../imgs/brain.png';
-import profile from '../../imgs/profile.png';
+import profile from '../../imgs/profile.jpg';
 
 function About() {
     return (
