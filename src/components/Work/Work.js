@@ -11,9 +11,10 @@ function Work() {
         setActive(id);
     }
 
-    var all = works.filter(e => e.data.type === "full" || e.data.type === "back" || e.data.type === "both");
+    var all = works.filter(e => e.data.type === "full" || e.data.type === "back" || e.data.type === "front" || e.data.type === "both");
     var full = works.filter(e => e.data.type === 'full' || e.data.type === "both");
-    var back = works.filter(e => e.data.type === 'back' || e.data.type === "both");
+    var front = works.filter(e => e.data.type === 'front');
+    var back = works.filter(e => e.data.type === 'back');
 
     const showAll = () => {
         setFilter(all);
@@ -21,6 +22,9 @@ function Work() {
     
     const showFull = () => {
         setFilter(full);
+    };
+    const showFront = () => {
+        setFilter(front);
     };
 
     const showBack = () => {
@@ -55,6 +59,12 @@ function Work() {
                         handleActive(2);
                     }}
                 >FULL STACK</button>
+                <button
+                    id="4" className={`work__btn ${active === 4 ? 'active-btn' : ''}`} onClick={(id) => {
+                        showFront();
+                        handleActive(4);
+                    }}
+                >FRONT-END</button>
                 <button
                     id="3" className={`work__btn ${active === 3 ? 'active-btn' : ''}`} onClick={(id) => {
                         showBack();
